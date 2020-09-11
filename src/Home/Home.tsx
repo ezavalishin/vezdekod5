@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Group, Panel } from '@vkontakte/vkui';
+import { Group, Panel, PanelHeader } from '@vkontakte/vkui';
 
 interface HomeProps {
   id: string;
@@ -10,6 +10,9 @@ const Home: FC<HomeProps> = ({ id }) => {
     <Panel
       id={id}
     >
+      <PanelHeader>
+        header
+      </PanelHeader>
       <Group>
         Home
       </Group>

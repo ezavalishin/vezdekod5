@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // styles
-import '@vkontakte/vkui/dist/vkui.css';
+import '@vkontakte/vkui/src/styles/styles.css';
 import { View } from '@vkontakte/vkui';
 import Home from './Home';
 
