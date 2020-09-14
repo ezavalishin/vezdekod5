@@ -32,7 +32,7 @@ const App = () => {
 
 
   return (
-    <ConfigProvider scheme={scheme} webviewType={WebviewType.VKAPPS} isWebView={true}>
+    <ConfigProvider scheme={scheme} webviewType={WebviewType.VKAPPS}>
       <RouterContext.Provider value={router}>
         <RecoilRoot>
           <Root />

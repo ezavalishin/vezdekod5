@@ -9,7 +9,7 @@ import {
   VIEW_DETAIL,
   VIEW_MAIN
 } from '../router';
-import {useLocation} from '@happysanta/router';
+import {useLocation, useRouter} from '@happysanta/router';
 import Start from '../panels/Start';
 import Type from '../panels/Type';
 import Settings from '../panels/Settings';
@@ -19,10 +19,11 @@ import Detail from '../panels/Detail';
 
 const Root = () => {
   const location = useLocation();
+  const router = useRouter();
 
   return (
     <ViewRoot activeView={location.route.getViewId()}>
-      <View id={VIEW_MAIN} activePanel={location.getViewActivePanel(VIEW_MAIN)} history={location.getViewHistory(VIEW_MAIN)}>
+      <View id={VIEW_MAIN} activePanel={location.getViewActivePanel(VIEW_MAIN)} history={location.getViewHistory(VIEW_MAIN)} onSwipeBack={router.popPage}>
         <Start id={PANEL_MAIN} />
         <Type id={PANEL_TYPE} />
         <Settings id={PANEL_SETTINGS} />
