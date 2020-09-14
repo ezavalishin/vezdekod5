@@ -1,15 +1,12 @@
+import '@vkontakte/vkui/src/styles/styles.css';
+
 import 'core-js/features/map';
 import 'core-js/features/set';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import bridge from '@vkontakte/vk-bridge';
-import App from './App';
-import { RecoilRoot } from 'recoil';
+import App from './containers/App';
 
-// Init VK  Mini App
-bridge.send('VKWebAppInit');
 
 ReactDOM.render(
-  <RecoilRoot>
-    <App />
-  </RecoilRoot>, document.getElementById('root'));
+  <App />
+  , document.getElementById('root'));

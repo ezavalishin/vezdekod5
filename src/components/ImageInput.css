@@ -1,0 +1,59 @@
+
+.ImageInput {
+
+}
+
+.ImageInput__input {
+  display: none;
+}
+
+.ImageInput__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  height: 140px;
+  border: 1px dashed var(--accent);
+  border-radius: 10px;
+  background-size: cover;
+}
+
+.ImageInput__wrapper .ImageInput__dismiss {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.ImageInput__before {
+  margin-right: 12px;
+}
+
+.ImageInput__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.ImageInput__caption {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: -0.32px;
+}
+
+.ImageInput--s-filled .ImageInput__wrapper {
+  border-color: transparent;
+}
+
+.ImageInput--s-filled .ImageInput__label {
+  display: none;
+}
+
+.ImageInput--s-error .ImageInput__wrapper {
+  border: 1px solid var(--field_error_border);
+  background: var(--field_error_background);
+  color: var(--destructive);
+}
